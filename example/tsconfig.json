@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "aepsdk-expo-plugin-core": ["../src/index"],
+      "aepsdk-expo-plugin-core/*": ["../src/*"]
+    }
+  }
+}
