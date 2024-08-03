@@ -4,6 +4,7 @@
   "description": "My new module",
   "main": "build/index.js",
   "types": "build/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "build": "expo-module build",
     "clean": "expo-module clean",
@@ -28,15 +29,23 @@
   "author": "Mayank Shekhar <> ()",
   "license": "MIT",
   "homepage": "https://github.com/mayank-shekhar/aepsdk-expo-plugin-core#readme",
-  "dependencies": {},
   "devDependencies": {
+    "@types/node": "^22.0.0",
     "@types/react": "^18.0.25",
+    "assert": "^2.1.0",
     "expo-module-scripts": "^3.5.2",
-    "expo-modules-core": "^1.12.19"
+    "expo-modules-core": "^1.12.19",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
   },
   "peerDependencies": {
     "expo": "*",
     "react": "*",
     "react-native": "*"
+  },
+  "peerDependenciesMeta": {
+    "expo": {
+      "optional": true
+    }
   }
 }

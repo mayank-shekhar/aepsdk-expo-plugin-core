@@ -24,6 +24,14 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "../plugin/app.plugin.js",
+        {
+          "environmentFileId": "default environment file id",
+        }
+      ]
+    ]
   }
 }

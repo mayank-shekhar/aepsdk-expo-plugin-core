@@ -1,12 +1,29 @@
 PODS:
-  - AepsdkExpoPluginCore (0.1.0):
-    - ExpoModulesCore
+  - AEPCore (5.2.0):
+    - AEPRulesEngine (< 6.0.0, >= 5.0.0)
+    - AEPServices (< 6.0.0, >= 5.2.0)
+  - AEPIdentity (5.2.0):
+    - AEPCore (< 6.0.0, >= 5.2.0)
+  - AEPLifecycle (5.2.0):
+    - AEPCore (< 6.0.0, >= 5.2.0)
+  - AEPRulesEngine (5.0.0)
+  - AEPServices (5.2.0)
+  - AEPSignal (5.2.0):
+    - AEPCore (< 6.0.0, >= 5.2.0)
   - boost (1.83.0)
   - DoubleConversion (1.1.6)
   - EXConstants (16.0.2):
     - ExpoModulesCore
-  - Expo (51.0.23):
+  - Expo (51.0.24):
     - ExpoModulesCore
+  - ExpoAdapterAEPCore (0.1.0):
+    - AEPCore (< 6.0.0, >= 5.0.0)
+    - AEPIdentity (< 6.0.0, >= 5.0.0)
+    - AEPLifecycle (< 6.0.0, >= 5.0.0)
+    - AEPServices (< 6.0.0, >= 5.0.0)
+    - AEPSignal (< 6.0.0, >= 5.0.0)
+    - ExpoModulesCore
+    - React
   - ExpoAsset (10.0.10):
     - ExpoModulesCore
   - ExpoFileSystem (17.0.1):
@@ -38,6 +55,8 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
+  - ExpoSystemUI (3.0.7):
+    - ExpoModulesCore
   - FBLazyVector (0.74.3)
   - fmt (9.1.0)
   - glog (0.3.5)
@@ -1205,16 +1224,17 @@ PODS:
   - Yoga (0.0.0)
 
 DEPENDENCIES:
-  - AepsdkExpoPluginCore (from `../../ios`)
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - EXConstants (from `../node_modules/expo-constants/ios`)
   - Expo (from `../node_modules/expo`)
+  - ExpoAdapterAEPCore (from `../../plugin/ios`)
   - ExpoAsset (from `../node_modules/expo-asset/ios`)
   - ExpoFileSystem (from `../node_modules/expo-file-system/ios`)
   - ExpoFont (from `../node_modules/expo-font/ios`)
   - ExpoKeepAwake (from `../node_modules/expo-keep-awake/ios`)
   - ExpoModulesCore (from `../node_modules/expo-modules-core`)
+  - ExpoSystemUI (from `../node_modules/expo-system-ui/ios`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - fmt (from `../node_modules/react-native/third-party-podspecs/fmt.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
@@ -1272,11 +1292,15 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AEPCore
+    - AEPIdentity
+    - AEPLifecycle
+    - AEPRulesEngine
+    - AEPServices
+    - AEPSignal
     - SocketRocket
 
 EXTERNAL SOURCES:
-  AepsdkExpoPluginCore:
-    :path: "../../ios"
   boost:
     :podspec: "../node_modules/react-native/third-party-podspecs/boost.podspec"
   DoubleConversion:
@@ -1285,6 +1309,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-constants/ios"
   Expo:
     :path: "../node_modules/expo"
+  ExpoAdapterAEPCore:
+    :path: "../../plugin/ios"
   ExpoAsset:
     :path: "../node_modules/expo-asset/ios"
   ExpoFileSystem:
@@ -1295,6 +1321,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-keep-awake/ios"
   ExpoModulesCore:
     :path: "../node_modules/expo-modules-core"
+  ExpoSystemUI:
+    :path: "../node_modules/expo-system-ui/ios"
   FBLazyVector:
     :path: "../node_modules/react-native/Libraries/FBLazyVector"
   fmt:
@@ -1402,16 +1430,23 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  AepsdkExpoPluginCore: 26a5e3baebadf99129e73f82c39b1d8b3c3413a0
+  AEPCore: db53082c207c28166ed6aa9ae6262a55e95c78aa
+  AEPIdentity: 3c597ef3d734d726f6a48ae10cdecb36fbeb28ca
+  AEPLifecycle: 0e2ddb26751320b88ea7471e63751f38c4ccdc10
+  AEPRulesEngine: fe5800653a4bee07b1e41e61b4d5551f0dba557b
+  AEPServices: d959143d13fde7e8464c19527df6baacdef765ce
+  AEPSignal: 3b9052359e25bdea9fa677955ed20db7702e17d5
   boost: d3f49c53809116a5d38da093a8aa78bf551aed09
   DoubleConversion: 76ab83afb40bddeeee456813d9c04f67f78771b5
   EXConstants: 409690fbfd5afea964e5e9d6c4eb2c2b59222c59
-  Expo: b7d771b7d25df5c25d04cd9fcfc8d56db5231fd8
+  Expo: 798848eae1daf13363d69790986146b08d0cf92f
+  ExpoAdapterAEPCore: efbd7840b610bfd872e9919317173063283f91a8
   ExpoAsset: 323700f291684f110fb55f0d4022a3362ea9f875
   ExpoFileSystem: 80bfe850b1f9922c16905822ecbf97acd711dc51
   ExpoFont: e7f2275c10ca8573c991e007329ad6bf98086485
   ExpoKeepAwake: 3b8815d9dd1d419ee474df004021c69fdd316d08
   ExpoModulesCore: 5440e96a8ee014f4fd88e77264985fd0a65f5f8c
+  ExpoSystemUI: d4f065a016cae6721b324eb659cdee4d4cf0cb26
   FBLazyVector: 7e977dd099937dc5458851233141583abba49ff2
   fmt: 4c2741a687cc09f0634a2e2c72a838b99f1ff120
   glog: fdfdfe5479092de0c4bdbebedd9056951f092c4f
@@ -1466,6 +1501,6 @@ SPEC CHECKSUMS:
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   Yoga: 04f1db30bb810187397fa4c37dd1868a27af229c
 
-PODFILE CHECKSUM: b5fbbab437cac49f8843c0d445979defd2f0439b
+PODFILE CHECKSUM: 637ba1ad89dd208b555b34aebb0ea378bbe2bc5f
 
 COCOAPODS: 1.15.2

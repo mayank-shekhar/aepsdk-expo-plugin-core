@@ -1,7 +1,7 @@
 {
   "platforms": ["ios", "tvos", "android", "web"],
   "ios": {
-    "modules": ["AepsdkExpoPluginCoreModule"]
+    "appDelegateSubscribers": ["AEPCoreAppDelegate"]
   },
   "android": {
     "modules": ["expo.modules.aepsdkexpoplugincore.AepsdkExpoPluginCoreModule"]

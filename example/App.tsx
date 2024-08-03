@@ -1,11 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native';
+import {MobileCore} from '@adobe/react-native-aepcore';
 
-import * as AepsdkExpoPluginCore from 'aepsdk-expo-plugin-core';
+// import * as AepsdkExpoPluginCore from 'aepsdk-expo-plugin-core';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>{AepsdkExpoPluginCore.hello()}</Text>
+      <Text>Hello from the example app</Text>
+      <Text>{ MobileCore.extensionVerion()}</Text>
     </View>
   );
 }
