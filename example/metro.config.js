@@ -16,11 +16,13 @@ config.resolver.blockList = [
 
 config.resolver.nodeModulesPaths = [
   path.resolve(__dirname, "./node_modules"),
-  path.resolve(__dirname, "../plugin/node_modules"),
+  path.resolve(__dirname, "../plugin/core/node_modules"),
+  path.resolve(__dirname, "../plugin/messaging/node_modules"),
 ];
 
 config.resolver.extraNodeModules = {
-  "aepsdk-expo-plugin-core": "../plugin",
+  "aepsdk-expo-plugin-core": "../plugin/core",
+  "aepsdk-expo-plugin-messaging": "../plugin/messaging",
 };
 
 config.watchFolders = [path.resolve(__dirname, "..")];

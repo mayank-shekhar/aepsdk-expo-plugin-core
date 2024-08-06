@@ -1,12 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native';
-import {MobileCore, PrivacyStatus} from '@adobe/react-native-aepcore';
+import { MobileCore, PrivacyStatus } from '@adobe/react-native-aepcore';
+import { Messaging } from '@adobe/react-native-aepmessaging';
 import { useEffect, useState } from 'react';
 
 // import * as AepsdkExpoPluginCore from 'aepsdk-expo-plugin-core';
 
 export default function App() {
   const [ privacyStatus, setPrivacyStatus ] = useState('');
-  const [loglevel, setLogLevel] = useState('');
+  const [ logLevel, setLogLevel ] = useState('');
+  const [messagingExtensionVersion, setMessagingExtensionVersion] = useState('');
 
 
   useEffect(() => {
@@ -22,13 +24,19 @@ export default function App() {
       console.log('Log level: ', level);
       setLogLevel(level);
     });
+
+    Messaging.extensionVersion().then((version) => {
+      console.log('Messaging extension version: ', version);
+      setMessagingExtensionVersion(version);
+    });
   }, []);
 
   return (
     <View style={styles.container}>
       <Text>Hello from the example app</Text>
       <Text>{privacyStatus}</Text>
-      <Text>{loglevel}</Text>
+      <Text>{logLevel}</Text>
+      <Text>Messaging: {messagingExtensionVersion}</Text>
     </View>
   );
 }

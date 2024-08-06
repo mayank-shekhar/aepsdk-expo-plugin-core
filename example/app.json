@@ -26,8 +26,9 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
+      "aepsdk-expo-plugin-messaging",
       [
-        "../plugin/app.plugin.js",
+        "../plugin/core/app.plugin.js",
         {
           "environmentFileId": "default environment file id"
         }

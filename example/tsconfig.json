@@ -4,8 +4,10 @@
     "jsx": "react-native",
     "strict": true,
     "paths": {
-      "aepsdk-expo-plugin-core": ["../src/index"],
-      "aepsdk-expo-plugin-core/*": ["../src/*"]
+      "aepsdk-expo-plugin-core": ["../plugin/core/src/index.ts"],
+      "aepsdk-expo-plugin-core/*": ["../plugin/core/src/*"],
+      "aepsdk-expo-plugin-messaging": ["../plugin/messaging/src/index.ts"],
+      "aepsdk-expo-plugin-messaging/*": ["../plugin/messaging/src/*"],
     }
   }
 }
