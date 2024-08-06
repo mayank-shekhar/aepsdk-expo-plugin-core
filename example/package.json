@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@adobe/react-native-aepcore": "6.0.2",
     "aepsdk-expo-plugin-core": "file:../plugin",
     "expo": "^51.0.24",
     "expo-asset": "^10.0.10",

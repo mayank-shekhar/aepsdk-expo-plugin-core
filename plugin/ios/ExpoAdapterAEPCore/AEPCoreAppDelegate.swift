@@ -13,9 +13,8 @@ public class AEPCoreAppDelegate: ExpoAppDelegateSubscriber {
 
     if let plist = plistDict, let plistConfig = plist["AEPCore"] as? [String: Any], let environmentFileId = plistConfig["environmentFileId"] as? String {
 
-
-      MobileCore.setLogLevel(.trace)
-      MobileCore.registerExtensions([Lifecycle.self, Identity.self, Signal.self], {
+        MobileCore.setLogLevel(.debug)
+        MobileCore.registerExtensions([Lifecycle.self, Identity.self, Signal.self], {
         MobileCore.configureWith(appId: environmentFileId)
       })
     }

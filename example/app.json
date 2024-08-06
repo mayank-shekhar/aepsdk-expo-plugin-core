@@ -29,7 +29,7 @@
       [
         "../plugin/app.plugin.js",
         {
-          "environmentFileId": "default environment file id",
+          "environmentFileId": "default environment file id"
         }
       ]
     ]

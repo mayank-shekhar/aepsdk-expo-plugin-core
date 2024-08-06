@@ -79,6 +79,12 @@ PODS:
     - DoubleConversion
     - fmt (= 9.1.0)
     - glog
+  - RCTAEPCore (6.0.2):
+    - AEPCore (< 6.0.0, >= 5.0.0)
+    - AEPIdentity (< 6.0.0, >= 5.0.0)
+    - AEPLifecycle (< 6.0.0, >= 5.0.0)
+    - AEPSignal (< 6.0.0, >= 5.0.0)
+    - React
   - RCTDeprecation (0.74.3)
   - RCTRequired (0.74.3)
   - RCTTypeSafety (0.74.3):
@@ -1241,6 +1247,7 @@ DEPENDENCIES:
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCT-Folly/Fabric (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
+  - "RCTAEPCore (from `../node_modules/@adobe/react-native-aepcore`)"
   - RCTDeprecation (from `../node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation`)
   - RCTRequired (from `../node_modules/react-native/Libraries/Required`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
@@ -1334,6 +1341,8 @@ EXTERNAL SOURCES:
     :tag: hermes-2024-06-28-RNv0.74.3-7bda0c267e76d11b68a585f84cfdd65000babf85
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
+  RCTAEPCore:
+    :path: "../node_modules/@adobe/react-native-aepcore"
   RCTDeprecation:
     :path: "../node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation"
   RCTRequired:
@@ -1452,6 +1461,7 @@ SPEC CHECKSUMS:
   glog: fdfdfe5479092de0c4bdbebedd9056951f092c4f
   hermes-engine: 1f547997900dd0752dc0cc0ae6dd16173c49e09b
   RCT-Folly: 02617c592a293bd6d418e0a88ff4ee1f88329b47
+  RCTAEPCore: 6153158b90917c9354e9b5fe838b3c4dfd7f3bda
   RCTDeprecation: 4c7eeb42be0b2e95195563c49be08d0b839d22b4
   RCTRequired: d530a0f489699c8500e944fde963102c42dcd0c2
   RCTTypeSafety: b20878506b094fa3d9007d7b9e4be0faa3562499

@@ -12,17 +12,16 @@ const withCoreInfoPlist: ConfigPlugin<SdkConfigurationProps> = (
 ) => {
   return withInfoPlist(config, (config) => {
     delete config.modResults.AEPCore;
-
-    if (logLevel) {
+    if (environmentFileId) {
       config.modResults.AEPCore = {
-        logLevel,
+        environmentFileId,
       };
     }
 
-    if (environmentFileId) {
+    if (logLevel) {
       config.modResults.AEPCore = {
         ...config.modResults.AEPCore,
-        environmentFileId,
+        logLevel,
       };
     }
 
